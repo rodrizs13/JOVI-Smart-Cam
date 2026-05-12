@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JOVI Smart Cam</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <img src="nova.png" class="animar">
+
+    <h1 class="animar">JOVI Smart Cam</h1>
+
+    <p class="animar">
+   Veja. Entenda. Aprenda
+    </p>
+</section>
+
+<!-- BLOCO 1 -->
+<section class="bloco-simples">
+    <div class="secao">
+        <div class="texto">
+            <h2>Visão Inteligente</h2>
+            <p>Após a captura, o JOVI Smart Cam entra em ação como um editor inteligente. Ele analisa automaticamente a imagem, identificando elementos como iluminação, foco e composição. Com base nisso, sugere melhorias instantâneas para deixar a foto mais nítida, equilibrada e visualmente mais agradável.
+O usuário pode aplicar ajustes com apenas um toque, sem precisar entender de edição. A IA também reconhece o conteúdo da imagem — como pessoas, animais ou paisagens — e adapta as melhorias para cada cenário, garantindo resultados mais naturais e profissionais.
+Assim, cada foto capturada não é apenas registrada, mas aprimorada de forma inteligente, transformando momentos comuns em imagens de alta qualidade.</p>
+        </div>
+        <img src="cachhoro.png" class="animar">
+    </div>
+</section>
+
+<!-- BLOCO 2 -->
+<section class="bloco-simples">
+    <div class="secao reverso">
+        <img src="video.png" class="animar">
+        <div class="texto">
+            <h2>Modo Vídeo Inteligente</h2>
+            <p>No modo vídeo, o JOVI Smart Cam atua em tempo real, analisando cada cena enquanto a gravação acontece. Ele identifica elementos do ambiente, ajusta automaticamente luz, cores e enquadramento, garantindo imagens mais estáveis e equilibradas sem esforço do usuário.
+Durante a gravação, a inteligência artificial também pode sugerir melhorias, destacar pontos importantes da cena e adaptar o foco conforme o movimento, tornando o vídeo mais dinâmico e profissional.
+Com isso, o usuário não precisa se preocupar com configurações técnicas — basta gravar, enquanto a IA cuida da qualidade, transformando qualquer momento em um conteúdo mais fluido e inteligente.</p>
+        </div>
+    </div>
+</section>
+<section class="bloco-simples">
+    <div class="secao reverso">
+        <img src="nova.png" class="animar">
+        <div class="texto">
+            <h2>Camera</h2>
+            <p>A câmera principal da JOVI Smart Cam foi projetada para capturar cada detalhe com precisão e clareza. Com uma interface limpa e intuitiva, o usuário pode focar apenas no momento, enquanto a tecnologia trabalha em segundo plano.
+Integrada ao sistema, a inteligência artificial analisa a cena em tempo real, identificando luz, profundidade e elementos do ambiente para ajustar automaticamente a captura. Isso garante fotos mais equilibradas, nítidas e com cores mais naturais, sem necessidade de configurações manuais.
+Seja em paisagens, pessoas ou objetos, a câmera entende o que está sendo fotografado e adapta o processamento para entregar o melhor resultado possível — transformando cada clique em uma imagem de alta qualidade.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SEÇÃO 1 -->
+<a href="https://www.jovimobile.com/br/about-jovi/news/jovi-zeiss-fotografia" target="_blank" class="bloco">
+    <section class="secao">
+        <div class="texto">
+            <h2>JOVI e ZEISS: inovação em fotografia móvel no Brasil</h2>
+            <p>Uma aliança para redefinir os limites da fotografia móvel</p>
+        </div>
+        <img src="zeiss.jpg">
+    </section>
+</a>
+
+<!-- SEÇÃO 2 -->
+<a href="https://www.jovimobile.com/br/about-jovi/news/historia-da-jovi-no-mundo" target="_blank" class="bloco">
+    <section class="secao reverso">
+        <img src="jvo.jpg">
+        <div class="texto">
+            <h2>Conheça a trajetória da vivo Mobile Communication Co., Ltd., criadora da marca JOVI</h2>
+            <p>CONHEÇA A HISTORIA DA EMPRESA QUE IRA REVOLUCIONAR AS CAMERAS</p>
+        </div>
+    </section>
+</a>
+
+<!-- SEÇÃO 3 -->
+<a href="https://www.jovimobile.com/br/about-jovi/news/producao-nacional-brasil" target="_blank" class="bloco">
+    <section class="secao">
+        <div class="texto">
+            <h2>Saiba mais sobre a produção nacional de Smartphones da JOVI na Zona Franca de Manaus</h2>
+            <p>CONHEÇA A FABRICA BRASILEIRA</p>
+        </div>
+        <img src="manaus.jpg">
+    </section>
+</a>
+
+<!-- BOTÃO -->
+<a href="assistente.html" target="_blank">
+    <div class="botao">🤖</div>
+</a>
+
+<script>
+const elementos = document.querySelectorAll('.animar');
+
+function ativar() {
+    elementos.forEach(el => {
+        const pos = el.getBoundingClientRect().top;
+        const tela = window.innerHeight;
+
+        if (pos < tela - 100) {
+            el.classList.add('ativo');
+        }
+    });
+}
+
+window.addEventListener('load', ativar);
+window.addEventListener('scroll', ativar);
+</script>
+
+</body>
+</html>

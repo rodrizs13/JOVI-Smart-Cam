@@ -1,0 +1,150 @@
+/* RESET BÁSICO */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: white;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.hero img {
+    width: 350px;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero p {
+    color: #aaa;
+}
+
+/* ANIMAÇÃO */
+.animar {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s ease;
+}
+
+.animar.ativo {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* BLOCOS SIMPLES */
+.bloco-simples {
+    padding: 100px 10%;
+}
+
+/* BLOCO CLICÁVEL */
+.bloco {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+/* SEÇÃO */
+.secao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    min-height: 100vh;
+    padding: 100px 10%;
+    transition: 0.5s;
+}
+
+/* INVERTE LADO */
+.reverso {
+    flex-direction: row-reverse;
+}
+
+/* TEXTO */
+.texto {
+    max-width: 450px;
+}
+
+.texto h2 {
+    font-size: 32px;
+}
+
+.texto p {
+    color: #aaa;
+    line-height: 1.6;
+}
+
+/* IMAGEM */
+.secao img {
+    width: 320px;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+/* HOVER */
+.bloco:hover img {
+    transform: scale(1.05);
+}
+
+.bloco:hover {
+    background: #111;
+}
+
+/* BOTÃO IA */
+.botao {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #00ff88, #00cc66);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 0 15px #00ff88;
+    cursor: pointer;
+}
+
+/* ========================= */
+/* 🎨 CORES DIFERENTES (CHAVE) */
+/* ========================= */
+
+/* BLOCO 1 */
+.bloco:nth-of-type(1) {
+    background: #0f172a; /* azul escuro */
+}
+
+/* BLOCO 2 */
+.bloco:nth-of-type(2) {
+    background: #111827; /* azul/cinza */
+}
+
+/* BLOCO 3 */
+.bloco:nth-of-type(3) {
+    background: #1f2937; /* cinza premium */
+}
+
+/* BLOCOS SIMPLES */
+.bloco-simples:nth-of-type(1) {
+    background: #0b0b0b;
+}
+
+.bloco-simples:nth-of-type(2) {
+    background: #111;
+}
+
+/* TRANSIÇÃO SUAVE */
+.secao {
+    transition: background 0.5s ease, transform 0.3s ease;
+}
