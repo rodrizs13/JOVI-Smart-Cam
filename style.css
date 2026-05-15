@@ -1,150 +1,208 @@
-/* RESET BÁSICO */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #000;
-    color: white;
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:#06080f;
+  color:#e0e8ff;
+  font:17px/1.8 Nunito,sans-serif
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+.hero{
+  text-align:center;
+  padding:100px 20px 80px;
+  background:
+  radial-gradient(circle at 30% 0%,#00c8ff20,transparent 60%),
+  radial-gradient(circle at 80% 80%,#7850ff1a,transparent 55%)
 }
 
-/* HERO */
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #000;
+.hero h1,.texto h2,.numero strong,.nome-marca{
+  font-family:'Bebas Neue',sans-serif;
+  background:linear-gradient(135deg,#fff,#00d4ff,#7b5fff);
+  -webkit-background-clip:text;
+  color:transparent
 }
 
-.hero img {
-    width: 350px;
-    margin-bottom: 40px;
+.badge,.hero p,.numero span,.texto small,.card-info .link{
+  text-transform:uppercase;
+  letter-spacing:2px
 }
 
-.hero h1 {
-    font-size: 36px;
+.badge{
+  display:inline-block;
+  padding:6px 18px;
+  border:1px solid #00d4ff55;
+  border-radius:99px;
+  color:#00d4ff;
+  margin-bottom:30px
 }
 
-.hero p {
-    color: #aaa;
+.foto-celular{
+  width:260px;
+  margin:0 auto 35px;
+  border-radius:28px;
+  box-shadow:0 0 60px #00d4ff33,0 30px 80px #0009
 }
 
-/* ANIMAÇÃO */
-.animar {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: 1s ease;
+.hero h1{font-size:90px}
+.hero p{font-size:14px;color:#e0e8ff80;margin-top:16px}
+
+.botoes,.numeros,.linha,footer{
+  display:flex;
+  flex-wrap:wrap
 }
 
-.animar.ativo {
-    opacity: 1;
-    transform: translateY(0);
+.botoes{
+  justify-content:center;
+  gap:14px;
+  margin-top:35px
 }
 
-/* BLOCOS SIMPLES */
-.bloco-simples {
-    padding: 100px 10%;
+.btn-azul,.btn-branco{
+  padding:13px 30px;
+  border-radius:99px;
+  font-weight:600;
+  transition:.2s
 }
 
-/* BLOCO CLICÁVEL */
-.bloco {
-    text-decoration: none;
-    color: white;
-    display: block;
+.btn-azul{
+  background:linear-gradient(135deg,#00d4ff,#7b5fff);
+  color:#fff
 }
 
-/* SEÇÃO */
-.secao {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-    min-height: 100vh;
-    padding: 100px 10%;
-    transition: 0.5s;
+.btn-branco{
+  border:1px solid #fff2
 }
 
-/* INVERTE LADO */
-.reverso {
-    flex-direction: row-reverse;
+.btn-azul:hover,.btn-branco:hover,.card:hover{
+  transform:translateY(-3px)
 }
 
-/* TEXTO */
-.texto {
-    max-width: 450px;
+.numeros{
+  justify-content:center;
+  gap:40px 70px;
+  padding:50px 20px;
+  border-block:1px solid #fff1
 }
 
-.texto h2 {
-    font-size: 32px;
+.numero{text-align:center}
+.numero strong{font-size:52px}
+.numero span{font-size:11px;color:#e0e8ff66}
+
+.funcionalidades,.noticias,footer{
+  max-width:1100px;
+  margin:auto
 }
 
-.texto p {
-    color: #aaa;
-    line-height: 1.6;
+.funcionalidades{
+  padding:80px 30px;
+  display:grid;
+  gap:90px
 }
 
-/* IMAGEM */
-.secao img {
-    width: 320px;
-    border-radius: 20px;
-    transition: 0.4s;
+.linha{
+  align-items:center;
+  gap:60px;
+  opacity:0;
+  transform:translateY(30px);
+  transition:.7s
 }
 
-/* HOVER */
-.bloco:hover img {
-    transform: scale(1.05);
+.linha.ativo,.card.ativo{
+  opacity:1;
+  transform:none
 }
 
-.bloco:hover {
-    background: #111;
+.linha.invertido{flex-direction:row-reverse}
+
+.linha img,.card{
+  border:1px solid #fff1;
+  box-shadow:0 25px 70px #0008
 }
 
-/* BOTÃO IA */
-.botao {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: linear-gradient(135deg, #00ff88, #00cc66);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 28px;
-    box-shadow: 0 0 15px #00ff88;
-    cursor: pointer;
+.linha img{
+  width:48%;
+  border-radius:20px
 }
 
-/* ========================= */
-/* 🎨 CORES DIFERENTES (CHAVE) */
-/* ========================= */
+.texto{flex:1}
+.texto small{color:#00d4ff}
+.texto h2{font-size:46px;margin:16px 0}
+.texto p,.card-info p{color:#e0e8ff80}
 
-/* BLOCO 1 */
-.bloco:nth-of-type(1) {
-    background: #0f172a; /* azul escuro */
+.noticias{
+  padding:0 30px 90px
 }
 
-/* BLOCO 2 */
-.bloco:nth-of-type(2) {
-    background: #111827; /* azul/cinza */
+.noticias h2{
+  font:48px 'Bebas Neue',sans-serif;
+  margin-bottom:30px
 }
 
-/* BLOCO 3 */
-.bloco:nth-of-type(3) {
-    background: #1f2937; /* cinza premium */
+.grade{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px
 }
 
-/* BLOCOS SIMPLES */
-.bloco-simples:nth-of-type(1) {
-    background: #0b0b0b;
+.card{
+  background:#0d1221;
+  border-radius:18px;
+  overflow:hidden;
+  opacity:0;
+  transform:translateY(30px);
+  transition:.6s
 }
 
-.bloco-simples:nth-of-type(2) {
-    background: #111;
+.card img{
+  height:180px;
+  width:100%;
+  object-fit:cover
 }
 
-/* TRANSIÇÃO SUAVE */
-.secao {
-    transition: background 0.5s ease, transform 0.3s ease;
+.card-info{padding:22px}
+.card-info h3{
+  font:22px 'Bebas Neue',sans-serif
+}
+
+.card-info .link{
+  display:inline-block;
+  margin-top:14px;
+  color:#00d4ff
+}
+
+footer{
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  padding:30px;
+  border-top:1px solid #fff1
+}
+
+.nome-marca{font-size:22px}
+.direitos{font-size:12px;color:#e0e8ff55}
+
+.flutuante{
+  position:fixed;
+  right:28px;
+  bottom:28px;
+  width:56px;
+  aspect-ratio:1;
+  border-radius:50%;
+  background:linear-gradient(135deg,#00d4ff,#7b5fff);
+  display:grid;
+  place-items:center;
+  font-size:24px;
+  z-index:999
+}
+
+@keyframes aparecer{
+  from{opacity:0;transform:translateY(25px)}
+}
+
+@media(max-width:768px){
+  .hero h1{font-size:60px}
+  .linha{flex-direction:column!important}
+  .linha img,.grade{width:100%}
+  .grade{grid-template-columns:1fr}
+  footer{flex-direction:column;text-align:center}
 }
